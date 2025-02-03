@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Me Happy 😊</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lora:ital@0;1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./logo.png" alt="Make Me Happy Logo">
+            <span>Make Me Happy</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Happiness Test</a></li>
+            <li><a href="#">Exercises</a></li>
+            <li><a href="#">Quotes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="hamburger">&#9776;</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover Your Happiness 😊</h1>
+        <p>Take a test to measure your happiness level and try exercises to boost your mood.</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=e9dZQelULDk&t=5s" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <button class="happiness-test">Take Happiness Test</button>
+    </section>
+
+    <!-- Newsfeed / Quotes -->
+    <section class="newsfeed">
+        <h2>💡 Daily Happiness Quotes</h2>
+        <div class="quote-box">
+            <p id="quote">"Happiness depends upon ourselves." – Aristotle</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Make Me Happy. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">🌐 Website</a>
+                <a href="#">📘 Facebook</a>
+                <a href="#">🐦 Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
+</body>
+
+</html>
