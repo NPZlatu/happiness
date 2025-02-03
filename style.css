@@ -1,11 +1,28 @@
+/* Color Variables */
+:root {
+  --primary-color: #66bfbf; /* Seafoam Green */
+  --secondary-color: #f6b8a6; /* Light Peach */
+  --tertiary-color: #f1a7b2; /* Light Coral */
+  --text-color: #f5f5f5; /* Black text */
+  --secondary-text-color: #333;
+  --background-gradient-start: #e0f7fa; /* Light Blue */
+  --background-gradient-end: #fce4ec; /* Light Peach */
+  --hover-color: #ff7f50; /* Coral for hover states */
+  --link-hover-color: #e65100; /* Dark Peach for links */
+}
+
 /* General Styles */
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
-  background: linear-gradient(to right, #e3f2fd, #fce4ec);
-  color: #333;
+  background: linear-gradient(
+    to right,
+    var(--background-gradient-start),
+    var(--background-gradient-end)
+  );
+  color: var(--text-color);
 }
 
 /* Navigation Bar */
@@ -13,7 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #3f51b5;
+  background: var(--primary-color);
   padding: 15px 20px;
   font-weight: 600;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -22,19 +39,19 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px; /* Add some space between the logo and text */
+  gap: 10px;
 }
 
 .logo img {
-  height: 40px; /* Adjust this size as needed */
+  height: 40px; /* Adjust logo height */
   width: auto;
 }
 
 .logo span {
   font-size: 1.6em;
   font-weight: 600;
-  color: #fff; /* White text for the "Make Me Happy" text */
-  font-family: "Poppins", sans-serif; /* Matching the font */
+  color: var(--text-color); /* Black text */
+  font-family: "Poppins", sans-serif;
 }
 
 .nav-links {
@@ -49,13 +66,13 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 1em;
   transition: color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-  color: #ffeb3b;
+  color: var(--link-hover-color);
 }
 
 /* Mobile Menu */
@@ -77,13 +94,13 @@ body {
 .hero h1 {
   font-size: 2.8em;
   font-weight: 600;
-  color: #3f51b5;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 1.3em;
-  color: #555;
+  color: var(--secondary-text-color); /* Black text */
   margin-bottom: 20px;
 }
 
@@ -93,7 +110,7 @@ body {
   margin-top: 20px;
   padding: 16px 32px;
   font-size: 1.2em;
-  background: #ff9800;
+  background: var(--secondary-color);
   color: white;
   border: none;
   border-radius: 30px;
@@ -102,33 +119,116 @@ body {
 }
 
 .happiness-test:hover {
-  background: #e65100;
+  background: var(--tertiary-color);
   transform: scale(1.08);
 }
 
 /* Newsfeed / Quotes */
 .newsfeed {
   margin-top: 40px;
-  background: #f3e5f5;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 1s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1s ease-in-out;
+  background: none;
+  color: var(--secondary-text-color); /* Black text */
 }
 
+/* Quote Box Styling */
 .quote-box {
   font-family: "Lora", serif;
   font-size: 1.4em;
   font-style: italic;
-  color: #444;
+  color: var(--secondary-text-color); /* Black text */
   padding: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Subscribe Section */
+.subscribe {
+  margin-top: 40px;
+  padding: 30px 20px;
+  color: var(--secondary-text-color); /* Black text */
+  border-radius: 12px;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.subscribe h2 {
+  font-size: 2.2em;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.subscribe p {
+  font-size: 1.2em;
+  color: var(--secondary-text-color); /* Black text */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Form Container */
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Input Field */
+.subscribe-form input {
+  padding: 15px 20px;
+  font-size: 1.1em;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  width: 300px;
+  max-width: 100%;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.subscribe-form input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Button Styles */
+.subscribe-form button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.subscribe-form button:hover {
+  background: var(--tertiary-color);
+  transform: scale(1.05);
+}
+
+.subscribe-form button:active {
+  transform: scale(1.02);
 }
 
 /* Footer */
 footer {
-  background: #3f51b5;
+  background: var(--primary-color);
   padding: 20px;
-  color: white;
+  color: var(--text-color);
   margin-top: 30px;
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -144,7 +244,7 @@ footer {
 }
 
 .social-links a {
-  color: #ffeb3b;
+  color: var(--text-color);
   text-decoration: none;
   margin: 0 12px;
   font-weight: bold;
@@ -152,7 +252,7 @@ footer {
 }
 
 .social-links a:hover {
-  color: #ff9800;
+  color: var(--tertiary-color);
 }
 
 /* Animations */
@@ -183,7 +283,7 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #3f51b5;
+    background: var(--primary-color);
     position: absolute;
     top: 60px;
     left: 0;
@@ -199,13 +299,29 @@ footer {
     display: block;
   }
 
+  .subscribe h2 {
+    font-size: 2em;
+  }
+
+  .subscribe p {
+    font-size: 1em;
+  }
+
+  .subscribe-form input {
+    width: 250px;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
   /* Make the iframe responsive */
   .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Aspect ratio of 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    width: 100%; /* Ensure the container takes the full width */
+    width: 100%;
   }
 
   .video-container iframe {
@@ -214,7 +330,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    max-width: 100%; /* Prevent enlarging */
+    max-width: 100%;
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   }
