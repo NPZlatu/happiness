@@ -1,8 +1,8 @@
 /* Color Variables */
 :root {
-  --primary-color: #66bfbf; /* Seafoam Green */
-  --secondary-color: #f6b8a6; /* Light Peach */
-  --tertiary-color: #f1a7b2; /* Light Coral */
+  --primary-color: #6bbf2e; /* Seafoam Green */
+  --secondary-color: #fbcf2b; /* Light Peach */
+  --tertiary-color: #ff6f61; /* Light Coral */
   --text-color: #f5f5f5; /* Black text */
   --secondary-text-color: #333;
   --background-gradient-start: #e0f7fa; /* Light Blue */
@@ -313,25 +313,5 @@ footer {
 
   .subscribe-form {
     flex-direction: column;
-  }
-
-  /* Make the iframe responsive */
-  .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   }
 }
